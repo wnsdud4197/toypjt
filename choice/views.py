@@ -6,3 +6,10 @@ def index(request):
 
     }
     return render(request, 'choice/index.html', context)
+
+
+def startproject(request):
+    context = {
+
+    }
+    return render(request, 'choice/startproject.html', context)

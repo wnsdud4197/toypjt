@@ -4,3 +4,18 @@
   bottom: 0;
   left: 0;
 }
+
+.sa {
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+/* 위에서 아래로 페이드 인 */
+.sa-down {
+  transform: translate(0, -100px);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}

@@ -6,10 +6,11 @@ var editor = ace.edit("editor", {
     autoScrollEditorIntoView: true,
     fontSize: 20
 });
+
 var code = editor.getValue();
 var btn = document.querySelector('input');
 var txt = document.querySelector('p');
-
+const folder = document.querySelector('.sa');
 
 $('.run').click(function updateBtn() {
   if (editor.getValue().startsWith(' $ django-admin startproject')) {
@@ -22,8 +23,10 @@ $('.run').click(function updateBtn() {
     var myTimer = setTimeout(function() {
       editor.insert("Something cool");
       editor.insert("\r");
+      folder.classList.add('show');
     }, 3000);
     txt.textContent = '';
+    
   } else {
     txt.textContent = '명령어를 확인해주세요.';
   }
@@ -32,3 +35,4 @@ $('.run').click(function updateBtn() {
 $('.reset').click(function resetEditor() {
   editor.setValue(" $ \r");
 });
+

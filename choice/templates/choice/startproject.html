@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'style/editor.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="my-5">
+  <div class="bg-dark border-bottom-0 rounded-top">
+    <div class="mx-3">
+      <i class="bi bi-circle-fill" style="font-size:0.85rem; color:#FF605C"></i>
+      <i class="bi bi-circle-fill" style="font-size:0.85rem; color:#FFBD44"></i>
+      <i class="bi bi-circle-fill" style="font-size:0.85rem; color:#00CA4E"></i>
+    </div>
+  </div>
+  <div id="editor"> $ django-admin
+  </div>
+  <p></p>
+  <form>
+    <input class="btn btn-primary run" type="button" value="run">
+    <input class="btn btn-light reset" type="button" value="reset">
+  </form>
+
+  <div class="">
+    <img src="{% static 'images/bluefolder2.png' %}" alt="" class="sa">
+  </div>
+
+<script src="{% static 'js/startproject.js' %}"></script>
+{% endblock %}
